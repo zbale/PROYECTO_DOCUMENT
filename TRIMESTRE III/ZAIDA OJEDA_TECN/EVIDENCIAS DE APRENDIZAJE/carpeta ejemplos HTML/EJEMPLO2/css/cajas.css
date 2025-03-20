@@ -1,0 +1,35 @@
+*{
+    /*quita espacios*/
+    padding: 0;
+margin: 0;
+}
+.caja{
+    background: red;
+    width: 200px;
+    height: 200px;
+    margin: 20px 0px;
+    padding: 20px;
+    border: 2px solid black;
+    margin-top: 20px;
+    /*inferior*/
+    margin-bottom:20px ;
+    margin-right:10px;
+    margin-left: 20px;
+}
+
+.caja p{
+    font-size: 12px;
+    background: green;
+}
+.boton{
+    background: #73bfb8;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block;
+    margin: 0px 10px;
+}
+.boton:hover{
+    opacity: .7;
+}

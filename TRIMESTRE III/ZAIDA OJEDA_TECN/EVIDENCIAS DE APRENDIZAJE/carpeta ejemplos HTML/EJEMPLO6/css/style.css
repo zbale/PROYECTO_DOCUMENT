@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #4a465b;
+}
+.contenedor{
+    width: 1200px;
+    margin: 20px auto; /*  margen X i Y */
+    overflow: hidden;
+
+
+}
+header{
+background-color: aliceblue;
+
+}
+header nav{
+    width: 100%;
+    text-align: center;
+}
+header nav ul{
+    width: 100%;
+    overflow: hidden;
+    list-style: none;  
+}
+header nav ul li{
+    float: left;
+
+}
+header nav ul li a{
+    text-decoration: none; /*  esto quita lo sudbrayado */
+    display: inline-block;
+    padding: 15px 20px;
+    color: black;
+    justify-content: center;
+    margin: 0 auto;
+}
+header nav ul li a:hover {
+    background-color:black;
+    color: #fff;
+}
+.main{
+    width: 700px;
+    background-color: #fff;
+    float: left;
+
+}
+.main imagen{
+    width: 100%;
+}
+.main .imagen img{
+    width: 100%;
+    vertical-align: top;
+} 
+.main .post{
+    padding: 40px;
+}
+.main .post articule h2{
+    margin: 20px;
+    color: #424242;
+}
+.main .post article p{
+    margin-bottom: 15px;
+    line-height: 27px;
+    text-align: justify;
+}
+aside{
+    width: 460px;
+    background-color: #161f26;
+    padding: 20px;
+    color: black;
+    float: left;
+    height: 755px;
+
+}
+aside .modulo {
+    margin: 20px;
+}
+aside .modulo .Titulo{
+    color: #ff8000;
+    border-bottom: 1px solid #ff8000;
+    margin-bottom: 10px ;
+
+}
+aside .modulo ul{
+list-style: none;
+}
+aside .modulo ul li{
+border-bottom: 1px solid rgb(255, 255, 225, 0.2);
+}
+aside .modulo ul li a{
+    color: white;
+    text-decoration-color: none;
+}
+aside .modulo ul li a:hover{
+    color: #8f8f8f;
+}
+aside .modulo p {
+    line-height: 27px;
+    color: white;
+    text-align: justify;
+
+}
+footer{
+    width: 100%;
+    clear: both;
+    background-color: black;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+.Tituloo {
+    text-align: center; /* Centra el texto */
+}

@@ -1,0 +1,63 @@
+*{color: #0C1821;
+    
+    }
+p{
+    font-size: 18px;
+    font-weight:bold;
+    line-height:1.5;
+    text-align: justify;
+    letter-spacing: 3px;
+}
+/*se pueden anidar elementos del mismo tipo*/
+h1,h2{
+    color: black;
+    font-family: "courier new", monospace;
+    font-size: 40px;
+    font-style: italic;
+    text-align: center;
+text-transform: uppercase;
+text-decoration: underline;}
+
+/*selector descendente*/
+div p{
+    font-size: 24px;
+    color: black;
+}
+
+p a{
+
+    color:black;
+}
+
+/*selector de clase*/
+.grande{ font-size: 30px;}
+body{
+    background: url("img/pexels-igor-starkov-233202-745767.jpg") #CEBBC9 /*LOS BORDES QUEDAN DEL COLOR QUE SE ESCOJA*/;
+
+    background-repeat:no-repeat ;
+    background-size: contain; 
+    /* fijar imagen*/
+    background-attachment: fixed; 
+    background-position: center center;
+    /*recomendacion no usar cursiva*/
+    font-family:sans-serif;
+}
+a{
+    font-size: 30px;
+    text-decoration: none;
+
+}
+/*agregar efecto*/
+a:hover{
+    background: yellow;
+    color: black;
+}
+/* cambiar cuando se a visitado*/
+a:link{
+    text-decoration: none;
+    color: #320E3B;
+}
+
+a:visited{
+
+}
