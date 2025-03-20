@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>calculadora basica</title>
+    <!--vamos a realizar una calculadora basica POO con funcion en javascript -->
+    <script>
+        function operasion(){
+            var x=Number(prompt("usuario introdusca una opcion"));
+            var w=document.getElementById( "resultado");
+            switch (x){
+                case 1:
+                    w.innerHTML=imput1 + imput2
+                    break;
+                case 2:
+                    w.innerHTML=imput1 - imput2
+                    break;
+                case 3:
+                    w.innerHTML=imput1 / imput2
+                    break;
+                case 4:
+                    w.innerHTML=imput1 * imput2
+                    break;
+                case 5:
+                    w.innerHTML=imput1 % imput2
+                    break;
+                case 6:
+                   document.body.innerHTML="se salio del sistema";
+                    break;
+            }
+        }
+        function iniciar(){
+            imput1=Number(prompt("introduce un valor"));
+            imput1=Number(prompt("introduce el segundo valor"));
+
+            document.getElementById('entrada1').innerHTML= "primer valor"+ imput1;
+            document.getElementById('entrada2').innerHTML= "segundo valor"+ imput2;
+        }
+    </script>
+</head>
+<body onload="iniciar()">
+    <h1>calculadora basica</h1>
+
+    <h2>funcionamiento de la calculadora</h2>
+    <ul>
+        <li>pulse 1 para sumar</li>
+        <li>pulse 2 para restar</li>
+        <li>pulse 3 para dividir</li>
+        <li>pulse 4 para multiplicar</li>
+        <li>pulse 5 para para optener el modulo</li>
+        <li>pulse 6 para salir</li>
+    </ul>
+    <p>
+        en funcion de la opcion seleccionada realizasara la operacion y si pulsa la opcion 6con el boton
+        confirmar pregunta si esta seguro de salir si es si serrara la ventana si es que no volvera a elegir
+    </p>
+    <div id="entrada1" style="color:blue; font-size: 1.6em"></div>
+    <div id="entrada2" style="color:blue; font-size: 1.6em"></div>
+
+    <form style="margin: auto;text-align:center">
+        <imput type="button" value="operacion" onclick="operacion()"/>
+    </form>
+    <div id=" resultado" style="color: brown;font-size:1.6em;margin:auto;text-align:center">
+        pulsa para realizar una operacion
+    </div>    
+
+</body>
+</html>
