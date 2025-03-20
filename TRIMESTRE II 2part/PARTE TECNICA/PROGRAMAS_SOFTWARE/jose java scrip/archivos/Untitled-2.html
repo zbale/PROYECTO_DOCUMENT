@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <script>
+        function handleLogin() {
+           
+            const username = prompt("Ingresa tu usuario:");
+            const correctUsername = 'Sena';
+            if (username !== correctUsername) {
+                document.write('Usuario incorrecto');
+                return false;
+            }
+ 
+            const password = prompt("Ingresa tu contraseña:");
+            const correctPassword = 'Adso';
+            if (password !== correctPassword) {
+                document.write('Contraseña incorrecta');
+                return false;
+            }
+
+        
+            alert("Por último, ingresa dos números y una operación para dar un resultado y para finalizar el inicio de sesión");
+            
+            
+            const operation = prompt("ELIGE UNA OPERACIÓN: suma, resta, multiplicación, división").toLowerCase();
+            document.write('Operación no válida. Usa solo "suma", "resta", "multiplicación" o "división".');
+            const num1 = parseFloat(prompt("Ingresa el primer número:"));
+            const num2 = parseFloat(prompt("Ingresa el segundo número:"));
+
+            
+            let result;
+            switch (operation) {
+                case 'suma':
+                    result = num1 + num2;
+                    alert(`${num1} + ${num2} = ${result}`);
+                    break;
+                case 'resta':
+                    result = num1 - num2;
+                    alert(`${num1} - ${num2} = ${result}`);
+                    break;
+                case 'multiplicación':
+                    result = num1 * num2;
+                    alert(`${num1} * ${num2} = ${result}`);
+                    break;
+                case 'división':
+                    if (num2 === 0) {
+                        alert('No se puede dividir entre cero.');
+                        return false;
+                    }
+                    result = (num1 / num2).toFixed(2);
+                    alert(`${num1} / ${num2} = ${result}`);
+                    break;
+                default:
+                    return false;
+            }
+            return true;
+        }
+
+        window.onload = function() {
+            handleLogin();
+        };
+    </script>
+</head>
+
+</html>

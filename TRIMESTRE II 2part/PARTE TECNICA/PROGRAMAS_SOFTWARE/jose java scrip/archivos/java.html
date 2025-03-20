@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>INICIAR SESIÓN</title>
+</head>
+<body>
+    <h4>FORMULARIO INICIO DE SESIÓN</h4>
+    <form id="loginForm" onsubmit="return handleLogin()">
+        <button type="submit">INICIAR SESIÓN</button>
+    </form>
+
+    <script>
+        function handleLogin() {
+            // Obtener el usuario a través de una ventana emergente
+            const username = prompt("Ingresa tu usuario:");
+
+            // Verificar si el usuario ingresado es válido
+            const correctUsername = 'Sena';
+            if (username !== correctUsername) {
+                alert('Usuario incorrecto');
+                return false;
+            }
+
+            // Obtener la contraseña a través de una ventana emergente
+            const password = prompt("Ingresa tu contraseña:");
+
+            // Verificar si la contraseña ingresada es válida
+            const correctPassword = 'Adso';
+            if (password !== correctPassword) {
+                alert('Contraseña incorrecta');
+                return false;
+            }
+
+            // Mensaje para indicar que el usuario debe ingresar números y una operación
+            alert("Para finalizar, elige dos números y una operación matemática.");
+
+            // Pedir al usuario que ingrese dos números y seleccione una operación
+            const num1 = parseFloat(prompt("Ingresa el primer número:"));
+            const num2 = parseFloat(prompt("Ingresa el segundo número:"));
+            const operation = prompt("Elige una operación: suma, resta, multiplicación, división").toLowerCase();
+
+            // Calcular la respuesta correcta según el operador
+            let correctAnswer;
+            let resultMessage;
+            switch (operation) {
+                case 'suma':
+                    correctAnswer = num1 + num2;
+                    resultMessage = `${num1} + ${num2} = ${correctAnswer}`;
+                    break;
+                case 'resta':
+                    correctAnswer = num1 - num2;
+                    resultMessage = `${num1} - ${num2} = ${correctAnswer}`;
+                    break;
+                case 'multiplicación':
+                    correctAnswer = num1 * num2;
+                    resultMessage = `${num1} * ${num2} = ${correctAnswer}`;
+                    break;
+                case 'división':
+                    correctAnswer = (num1 / num2).toFixed(2); // Respuesta con dos decimales
+                    resultMessage = `${num1} / ${num2} = ${correctAnswer}`;
+                    break;
+                default:
+                    alert('Operación no válida. Usa "suma", "resta", "multiplicación" o "división".');
+                    return false;
+            }
+
+            // Mostrar el resultado de la operación
+            alert(`El resultado de la operación es:\n${resultMessage}`);
+
+            // Si todo es correcto
+            alert('Inicio de sesión exitoso');
+            return false; // Evitar el envío del formulario y recarga de página
+        }
+    </script>
+</body>
+</html>

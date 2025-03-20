@@ -1,0 +1,40 @@
+<html>
+<head>
+    
+    <title>Adivina el Numero aleatorio</title>
+</head>
+<body>
+    <script languaje="javascript">
+    var numeroaleatorio = Math.floor(Math.random() * 100) + 1;
+    var intentos = 10;
+    var intentosRealizados = 0;
+
+    while (intentosRealizados < intentos) {
+        var numeroIngresado = prompt("adivina el numero entre el numero 1 y el 100");
+
+        if (isNaN(numeroIngresado) || numeroIngresado < 1 || numeroIngresado > 100) {
+            alert("ingresa un numero valido entre el numero 1 y el 100 ");
+            continue;
+        }
+
+        numeroIngresado = parseInt(numeroIngresado);
+
+        if (numeroIngresado === numeroaleatorio) {
+            document.write("te felisito por adivinar el numero aleatorio "+ numeroIngresado +  " en " + (intentosRealizados + 1) + " intentos.");
+            break;
+        } else if (numeroIngresado < numeroaleatorio) {
+            alert("el numero todavia es mayor que " + numeroIngresado + ".");
+        } else {
+            alert("el numero todavia es menor que " + numeroIngresado + ".");
+        }
+
+        intentosRealizados++;
+    }
+
+    if (intentosRealizados === intentos) {
+        document.write("lo siento, pero no adivinaste el numero,suerte para la proxima el numero aleatorio era " + numeroaleatorio + ".");
+    }
+</script>
+
+</body>
+</html>

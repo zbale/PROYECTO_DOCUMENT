@@ -1,0 +1,44 @@
+<html>
+<head>
+<title> ciclos javascript</title>
+</head>
+<script>
+var i;
+for (i=0; i<=10; i++){
+document.write(i)
+document.write('<br>')
+
+}
+
+for (i=1; i<=6; ++i){
+    document.write ("<h"+ i+ "> Encabezado de tamaño" + i  + "</h" + i + ">")
+}
+var color=""
+while (color !="azul"){
+    color = prompt("Dame un color (Escribe azul para salir) ","")
+}
+
+var suma =0;
+while (suma<1000){
+    suma += parseInt(Math.random()*100)
+    document.write (suma + "<br>" )
+}
+
+for (i=0; i<=1000;i++){
+    document.write(i+ "<br>")
+    if (i==200)
+    //esta parte detiene el for cuando el numero es igual a 200
+    break; 
+}
+
+var y;
+y=prompt('Generar la tabla de multiplicar', '');
+y=parseInt(y);
+for (var x = 1 ; x <=10; x++){
+    r=y*x;
+    document.write(y+"x"+x+"="+r+"<br>");
+}
+
+
+</script>
+</html>

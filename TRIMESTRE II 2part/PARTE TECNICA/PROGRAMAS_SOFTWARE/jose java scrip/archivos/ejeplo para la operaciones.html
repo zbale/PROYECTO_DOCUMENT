@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>INICIAR SESIÓN</title>
+    <style>
+        #errorMessage, #resultMessage {
+            color: rgb(6, 4, 4);
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="errorMessage"></div>
+    <div id="resultMessage"></div>
+
+    <script>
+        window.onload = function() {
+            handleLogin();
+        };
+
+        function handleLogin() {
+            const correctUsername = "Sena";
+            const correctPassword = "Adso";
+
+            let username = prompt("Ingresa tu usuario");
+            if (username !== correctUsername) {
+                document.getElementById("errorMessage").textContent = "Usuario incorrecto";
+                return;
+            }
+
+            let password = prompt("Ingresa tu contraseña");
+            if (password !== correctPassword) {
+                document.getElementById("errorMessage").textContent = "Contraseña incorrecta";
+                return;
+            }
+
+            document.getElementById("errorMessage").textContent = "";
+
+            const validOperations = ["suma", "resta", "multiplicación", "división"];
+            let operation;
+
+            do {
+                operation = prompt("ELIGE UNA OPERACIÓN: suma, resta, multiplicación, división").toLowerCase();
+            } while (!validOperations.includes(operation));
+
+            const num1 = parseFloat(prompt("Ingresa el primer número"));
+            const num2 = parseFloat(prompt("Ingresa el segundo número"));
+
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById("resultMessage").textContent = "Por favor, ingresa números validos.";
+                return;
+            }
+
+            let correctAnswer;
+            let resultMessage;
+
+            switch (operation) {
+                case 'suma':
+                    correctAnswer = num1 + num2;
+                    resultMessage = `${num1} + ${num2} = ${correctAnswer}`;
+                    break;
+                case 'resta':
+                    correctAnswer = num1 - num2;
+                    resultMessage = `${num1} - ${num2} = ${correctAnswer}`;
+                    break;
+                case 'multiplicación':
+                    correctAnswer = num1 * num2;
+                    resultMessage = `${num1} * ${num2} = ${correctAnswer}`;
+                    break;
+                case 'división':
+                    if (num2 === 0) {
+                        resultMessage = "error, ingresa cualquier otro numero menos el 0";
+                    } else {
+                        correctAnswer = (num1 / num2).toFixed(2);
+                        resultMessage = `${num1} / ${num2} = ${correctAnswer}`;
+                    }
+                    break;
+            }
+
+            document.getElementById("resultMessage").textContent = `el resultado de la operacion es: ${correctAnswer}`;
+        }
+    </script>
+</body>
+</html>
+
+
+

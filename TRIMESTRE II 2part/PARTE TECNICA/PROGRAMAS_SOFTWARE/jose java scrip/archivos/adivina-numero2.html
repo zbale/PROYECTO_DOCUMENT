@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Adivina el Numero oculto</title>
+</head>
+<body>
+
+<script languaje="javascript">
+    var numerooculto = 19; 
+    var intentos = 10;
+    var intentosRealizados = 0;
+    var mensajeDiv = document.getElementById('mensaje');
+
+
+
+    while (intentosRealizados < intentos) {
+        var numeroIngresado = prompt("adivina el numero oculto entre el numero 1 y el 100");
+
+        if (numeroIngresado === null) { 
+            break;
+        }
+
+        if (isNaN(numeroIngresado) || numeroIngresado < 1 || numeroIngresado > 100) {
+            alert("ingresa un numero valido entre 1 y 100.");
+            continue;
+        }
+
+        numeroIngresado = parseInt(numeroIngresado);
+
+        if (numeroIngresado === numerooculto) {
+            document.write("felisidades por adivinar el numero oculto "+ numeroIngresado + " en " + (intentosRealizados + 1) + " intentos.");
+            break;
+        } else if (numeroIngresado < numerooculto) {
+            alert("el numero todavia es mayor que " + numeroIngresado + ".");
+        } else {
+            alert("el numero todavia es menor que " + numeroIngresado + ".");
+        }
+
+        intentosRealizados++;
+    }
+
+    if (intentosRealizados === intentos) {
+        document.write("lo siento, pero no adivinaste el numero, suerte para la proxima, el numero oculto era " + numerooculto + ".");
+    }
+
+</script>
+
+</body>
+</html>
